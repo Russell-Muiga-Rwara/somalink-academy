@@ -1,0 +1,1 @@
+console.log("SomaLink Academy loaded successfully.");
