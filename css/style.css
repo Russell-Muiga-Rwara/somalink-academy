@@ -20,3 +20,40 @@ body {
 footer {
     margin-top: 80px;
 }
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color: white;
+
+    padding: 120px 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    margin-right: 10px;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
