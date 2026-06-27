@@ -19,10 +19,11 @@
             SomaLink Futures
         </a>
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -52,45 +53,142 @@
 
 <main class="container py-5">
 
-    <h1 class="text-center mb-4">
-        Contact Us
-    </h1>
+    <div class="text-center mb-5">
 
-    <p class="text-center mb-5">
-        We'd love to hear from you.
-    </p>
+        <h1>Contact SomaLink Futures</h1>
 
-    <div class="row justify-content-center">
+        <p class="lead">
+            We'd love to hear from students, mentors and partners.
+        </p>
 
-        <div class="col-lg-8">
+    </div>
 
-            <form>
+    <div class="row g-5">
 
-                <div class="mb-3">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-control" placeholder="Enter your full name">
+        <div class="col-lg-7">
+
+            <div class="card shadow-sm p-4">
+
+                <h3 class="mb-4">
+                    Send us a Message
+                </h3>
+
+                <form id="contactForm">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="John Doe"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="john@example.com"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="subject"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Message
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            rows="6"
+                            id="message"
+                            required></textarea>
+
+                    </div>
+
+                    <button class="btn btn-primary btn-lg w-100">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-5">
+
+            <div class="card shadow-sm p-4 mb-4">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <hr>
+
+                <p>
+                    📍 Nairobi, Kenya
+                </p>
+
+                <p>
+                    📧 info@somalinkfutures.org
+                </p>
+
+                <p>
+                    📞 +254 700 123 456
+                </p>
+
+                <p>
+                    🕒 Monday – Friday<br>
+                    8:00 AM – 5:00 PM
+                </p>
+
+            </div>
+
+            <div class="card shadow-sm p-4">
+
+                <h4 class="mb-3">
+                    Office Location
+                </h4>
+
+                <div
+                    class="bg-light rounded d-flex justify-content-center align-items-center"
+                    style="height:220px;">
+
+                    <strong>
+                        Google Maps Placeholder
+                    </strong>
+
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Subject</label>
-                    <input type="text" class="form-control" placeholder="Subject">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" rows="6" placeholder="Type your message"></textarea>
-                </div>
-
-                <button class="btn btn-primary btn-lg">
-                    Send Message
-                </button>
-
-            </form>
+            </div>
 
         </div>
 
