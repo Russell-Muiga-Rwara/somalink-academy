@@ -1,59 +1,133 @@
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #1f2937;
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- Global ---------- */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8FAFC;
+    color:#1E293B;
+    line-height:1.7;
 }
 
-.navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* ---------- Navbar ---------- */
+
+.navbar{
+    background:#4F46E5 !important;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
-.navbar-brand {
-    font-size: 1.4rem;
+.navbar-brand{
+    font-size:1.45rem;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
+.nav-link{
+    font-weight:500;
+    transition:.25s;
 }
 
-footer {
-    margin-top: 80px;
-}
-.hero-section {
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #1e40af
-    );
-
-    color: white;
-
-    padding: 120px 0;
+.nav-link:hover{
+    color:#A5F3FC !important;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
+/* ---------- Buttons ---------- */
+
+.btn-primary{
+    background:#4F46E5;
+    border:none;
+    padding:12px 28px;
+    border-radius:12px;
+    transition:.3s;
 }
 
-.hero-text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.btn-primary:hover{
+
+    background:#4338CA;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(79,70,229,.25);
+
 }
 
-.hero-btn {
-    margin-right: 10px;
+/* ---------- Cards ---------- */
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    overflow:hidden;
+
 }
 
-.stat-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
+/* ---------- Images ---------- */
+
+.card img{
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+/* ---------- Headings ---------- */
+
+h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-weight:600;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    margin-top:100px;
+
+    background:#0F172A !important;
+
+}
+
+footer p{
+
+    margin-bottom:0;
+
+}
+
+/* ---------- Section spacing ---------- */
+
+section{
+
+    padding-top:40px;
+
+    padding-bottom:40px;
+
 }
