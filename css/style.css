@@ -324,3 +324,57 @@ body.dark-mode p{
     }
 
 }
+/* =======================================
+   Final UI Polish
+======================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform .4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+}
+
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,.45);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
+}
+
+.shadow-sm,
+.shadow,
+.shadow-lg {
+    transition: all .3s ease;
+}
