@@ -1,5 +1,62 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ======================================
+// SOMALINK FUTURES SCRIPT
+// ======================================
 
+document.addEventListener("DOMContentLoaded", () => {
+    initTheme();
+    initContactForm();
+    initResourceSearch();
+    initTooltips();
+    initCounters();
+    initBackToTop();
+});
+
+// ======================================
+// DARK MODE
+// ======================================
+
+function initTheme() {
+    const themeToggle = document.getElementById("themeToggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    updateThemeIcon();
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            const currentTheme =
+                document.body.classList.contains("dark-mode")
+                    ? "dark"
+                    : "light";
+
+            localStorage.setItem("theme", currentTheme);
+
+            updateThemeIcon();
+        });
+    }
+}
+
+function updateThemeIcon() {
+    const icon = document.querySelector("#themeToggle i");
+
+    if (!icon) return;
+
+    if (document.body.classList.contains("dark-mode")) {
+        icon.className = "bi bi-sun-fill";
+    } else {
+        icon.className = "bi bi-moon-stars-fill";
+    }
+}
+
+// ======================================
+// CONTACT FORM VALIDATION
+// ======================================
+
+function initContactForm() {
     const form = document.getElementById("contactForm");
 
     if (!form) return;
@@ -10,237 +67,206 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = document.getElementById("message");
     const successAlert = document.getElementById("successAlert");
 
-    form.addEventListener("submit", function (e) {
-
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         let valid = true;
 
-        // ---------- Name ----------
+        clearValidation();
 
         if (name.value.trim() === "") {
-
-            name.classList.add("is-invalid");
+            invalidate(name);
             valid = false;
-
         } else {
-
-            name.classList.remove("is-invalid");
-            name.classList.add("is-valid");
-
+            validate(name);
         }
-
-        // ---------- Email ----------
 
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email.value.trim())) {
-
-            email.classList.add("is-invalid");
+            invalidate(email);
             valid = false;
-
         } else {
-
-            email.classList.remove("is-invalid");
-            email.classList.add("is-valid");
-
+            validate(email);
         }
-
-        // ---------- Subject ----------
 
         if (subject.value.trim() === "") {
-
-            subject.classList.add("is-invalid");
+            invalidate(subject);
             valid = false;
-
         } else {
-
-            subject.classList.remove("is-invalid");
-            subject.classList.add("is-valid");
-
+            validate(subject);
         }
-
-        // ---------- Message ----------
 
         if (message.value.trim().length < 20) {
-
-            message.classList.add("is-invalid");
+            invalidate(message);
             valid = false;
-
         } else {
-
-            message.classList.remove("is-invalid");
-            message.classList.add("is-valid");
-
+            validate(message);
         }
 
-        // ---------- Success ----------
-
         if (valid) {
+            if (successAlert) {
+                successAlert.classList.remove("d-none");
 
-            successAlert.classList.remove("d-none");
+                setTimeout(() => {
+                    successAlert.classList.add("d-none");
+                }, 5000);
+            }
 
             form.reset();
 
-            name.classList.remove("is-valid");
-            email.classList.remove("is-valid");
-            subject.classList.remove("is-valid");
-            message.classList.remove("is-valid");
-
-            setTimeout(function () {
-
-                successAlert.classList.add("d-none");
-
-            }, 5000);
-
+            document
+                .querySelectorAll(".is-valid")
+                .forEach((el) => {
+                    el.classList.remove("is-valid");
+                });
         }
-
     });
 
-});
-
-// =========================
-// Dark Mode Toggle
-// =========================
-
-const themeToggle = document.getElementById("themeToggle");
-
-if (themeToggle) {
-
-    // Apply saved theme
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
+    function clearValidation() {
+        document
+            .querySelectorAll(".is-invalid")
+            .forEach((el) => {
+                el.classList.remove("is-invalid");
+            });
     }
 
-    themeToggle.addEventListener("click", function () {
+    function validate(field) {
+        field.classList.remove("is-invalid");
+        field.classList.add("is-valid");
+    }
 
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-
-            localStorage.setItem("theme", "dark");
-
-        } else {
-
-            localStorage.setItem("theme", "light");
-
-        }
-
-    });
-
+    function invalidate(field) {
+        field.classList.remove("is-valid");
+        field.classList.add("is-invalid");
+    }
 }
 
-// ===============================
-// Resource Search Filter
-// ===============================
+// ======================================
+// RESOURCE SEARCH
+// ======================================
 
-const searchInput = document.getElementById("resourceSearch");
+function initResourceSearch() {
+    const searchInput =
+        document.getElementById("resourceSearch");
 
-if (searchInput) {
+    if (!searchInput) return;
 
-    searchInput.addEventListener("keyup", function () {
+    searchInput.addEventListener("keyup", () => {
+        const filter =
+            searchInput.value.toLowerCase();
 
-        const filter = searchInput.value.toLowerCase();
+        const cards =
+            document.querySelectorAll(
+                ".resource-card"
+            );
 
-        const cards = document.querySelectorAll(".resource-card");
-
-        cards.forEach(card => {
-
-            const text = card.textContent.toLowerCase();
+        cards.forEach((card) => {
+            const text =
+                card.textContent.toLowerCase();
 
             if (text.includes(filter)) {
-
                 card.style.display = "";
-
             } else {
-
                 card.style.display = "none";
-
             }
-
         });
-
     });
-
 }
 
-// Bootstrap Tooltips
+// ======================================
+// BOOTSTRAP TOOLTIPS
+// ======================================
 
-const tooltipTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="tooltip"]'
-);
+function initTooltips() {
+    const tooltipTriggerList =
+        document.querySelectorAll(
+            '[data-bs-toggle="tooltip"]'
+        );
 
-const tooltipList = [...tooltipTriggerList].map(
-    tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
-);
-/* ======================================
-   Animated Statistics Counter
-====================================== */
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-
-    const target = +counter.dataset.target;
-
-    const speed = 200;
-
-    const updateCounter = () => {
-
-        const current = +counter.innerText.replace(/,/g, "");
-
-        const increment = Math.ceil(target / speed);
-
-        if (current < target) {
-
-            counter.innerText = (current + increment).toLocaleString();
-
-            setTimeout(updateCounter, 10);
-
-        } else {
-
-            counter.innerText = target.toLocaleString() + "+";
-
-        }
-
-    };
-
-    updateCounter();
-
-});
-/* ======================================
-   Back To Top Button
-====================================== */
-
-const backToTop = document.getElementById("backToTop");
-
-if (backToTop) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 300) {
-
-            backToTop.style.display = "block";
-
-        } else {
-
-            backToTop.style.display = "none";
-
-        }
-
+    [...tooltipTriggerList].forEach((el) => {
+        new bootstrap.Tooltip(el);
     });
+}
 
-    backToTop.addEventListener("click", () => {
+// ======================================
+// COUNTER ANIMATION
+// ======================================
 
-        window.scrollTo({
+function initCounters() {
+    const counters =
+        document.querySelectorAll(".counter");
 
-            top: 0,
+    counters.forEach((counter) => {
+        const target =
+            +counter.dataset.target;
 
-            behavior: "smooth"
+        const speed = 200;
 
-        });
+        const updateCounter = () => {
+            const current =
+                +counter.innerText.replace(
+                    /,/g,
+                    ""
+                );
 
+            const increment =
+                Math.ceil(target / speed);
+
+            if (current < target) {
+                counter.innerText =
+                    (
+                        current + increment
+                    ).toLocaleString();
+
+                setTimeout(
+                    updateCounter,
+                    10
+                );
+            } else {
+                counter.innerText =
+                    target.toLocaleString() +
+                    "+";
+            }
+        };
+
+        updateCounter();
     });
+}
 
+// ======================================
+// BACK TO TOP BUTTON
+// ======================================
+
+function initBackToTop() {
+    const backToTop =
+        document.getElementById(
+            "backToTop"
+        );
+
+    if (!backToTop) return;
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display =
+                    "block";
+            } else {
+                backToTop.style.display =
+                    "none";
+            }
+        }
+    );
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    );
 }

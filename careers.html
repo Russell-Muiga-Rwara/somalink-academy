@@ -6,18 +6,26 @@
     <title>Careers - SomaLink Futures</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-primary">
-
+<nav class="navbar navbar-expand-xl navbar-dark sticky-top" aria-label="Main Navigation">
     <div class="container">
 
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand" href="index.html">
             SomaLink Futures
         </a>
+
+        <button
+            id="themeToggle"
+            class="btn btn-outline-light ms-auto me-3"
+            type="button"
+            aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill"></i>
+        </button>
 
         <button
             class="navbar-toggler"
@@ -27,247 +35,151 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="careers.html">Careers</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="mentors.html">Mentors</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="scholarships.html">Scholarships</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="success-stories.html">Success Stories</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-
+            <ul class="navbar-nav ms-xl-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="mentors.html">Mentors</a></li>
+                <li class="nav-item"><a class="nav-link" href="scholarships.html">Scholarships</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="success-stories.html">Success Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
-
         </div>
 
     </div>
-
 </nav>
 
-    <main class="container py-5">
+<main>
 
-        <h1 class="text-center mb-4">
-            Career Pathways
-        </h1>
+    <section class="container">
 
-        <p class="text-center">
-            Explore high-demand careers shaping the future.
-        </p>
+        <div class="text-center mb-5">
+            <span class="badge mb-3 px-3 py-2">
+                <i class="bi bi-briefcase-fill me-2"></i>
+                Future Careers
+            </span>
 
-        <div class="row mt-5 g-4">
+            <h1>Explore Career Pathways</h1>
+
+            <p class="lead">
+                Discover high-demand careers shaping the future and the skills needed to succeed.
+            </p>
+        </div>
+
+        <div class="row g-4">
 
             <div class="col-md-6">
-
-                <div class="card p-4 h-100 shadow-sm">
-
+                <div class="card p-4 h-100">
+                    <i class="bi bi-code-slash text-primary fs-1 mb-3"></i>
                     <h3>Software Engineering</h3>
-
                     <p>
-                        Design and build modern web, mobile and desktop applications while solving real-world problems through technology.
+                        Design and build modern web, mobile and desktop applications
+                        while solving real-world problems through technology.
                     </p>
-
+                    <span class="badge bg-primary align-self-start">Technology</span>
                 </div>
-
             </div>
 
             <div class="col-md-6">
-
-                <div class="card p-4 h-100 shadow-sm">
-
+                <div class="card p-4 h-100">
+                    <i class="bi bi-graph-up-arrow text-success fs-1 mb-3"></i>
                     <h3>Data Science</h3>
-
                     <p>
-                        Use statistics, programming and machine learning to uncover insights from data and support smarter decision-making.
+                        Use statistics, programming and machine learning to uncover
+                        insights from data and support smarter decision-making.
                     </p>
-
+                    <span class="badge bg-success align-self-start">Analytics</span>
                 </div>
-
             </div>
 
             <div class="col-md-6">
-
-                <div class="card p-4 h-100 shadow-sm">
-
+                <div class="card p-4 h-100">
+                    <i class="bi bi-shield-lock-fill text-danger fs-1 mb-3"></i>
                     <h3>Cybersecurity</h3>
-
                     <p>
-                        Protect computer systems, networks and digital information from cyber threats while ensuring data privacy.
+                        Protect computer systems, networks and digital information
+                        from cyber threats while ensuring data privacy.
                     </p>
-
+                    <span class="badge bg-danger align-self-start">Security</span>
                 </div>
-
             </div>
 
             <div class="col-md-6">
-
-                <div class="card p-4 h-100 shadow-sm">
-
+                <div class="card p-4 h-100">
+                    <i class="bi bi-currency-dollar text-warning fs-1 mb-3"></i>
                     <h3>Financial Analysis</h3>
-
                     <p>
-                        Analyse financial data, evaluate investments and support organisations in making strategic financial decisions.
+                        Analyse financial data, evaluate investments and support
+                        organisations in making strategic financial decisions.
                     </p>
-
+                    <span class="badge bg-warning text-dark align-self-start">Finance</span>
                 </div>
-
             </div>
 
         </div>
 
-                <section class="text-center mt-5">
+    </section>
 
-            <h2>
-                Ready to Start Your Journey?
+    <section class="container text-center">
+        <div class="card p-5">
+            <h2 class="mb-3">
+                Ready To Start Your Journey?
             </h2>
 
-            <p>
-                Connect with mentors, discover scholarships, and begin building
-                your future with SomaLink Futures.
+            <p class="lead mb-4">
+                Connect with mentors, discover scholarships and begin building your future with SomaLink Futures.
             </p>
 
             <a href="contact.html" class="btn btn-primary btn-lg">
                 Contact Us
             </a>
+        </div>
+    </section>
 
-        </section>
-    </main>
+</main>
 
-    <footer class="bg-dark text-white pt-5 pb-3">
-
+<footer role="contentinfo" class="bg-dark text-white pt-5 pb-3">
     <div class="container">
 
         <div class="row gy-4">
 
             <div class="col-lg-4">
-
-                <h3 class="fw-bold mb-3">
-                    SomaLink Futures
-                </h3>
-
+                <h3>SomaLink Futures</h3>
                 <p>
-                    Helping African students discover careers,
-                    scholarships, mentorship and future-ready skills.
+                    Helping African students discover careers, scholarships,
+                    mentorship and future-ready skills.
                 </p>
-
             </div>
 
             <div class="col-lg-2">
-
                 <h5>Company</h5>
-
                 <ul class="list-unstyled">
-
-                    <li>
-                        <a href="about.html"
-                           class="text-white text-decoration-none">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="careers.html"
-                           class="text-white text-decoration-none">
-                            Careers
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mentors.html"
-                           class="text-white text-decoration-none">
-                            Mentors
-                        </a>
-                    </li>
-
+                    <li><a href="about.html" class="text-decoration-none">About</a></li>
+                    <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                    <li><a href="mentors.html" class="text-decoration-none">Mentors</a></li>
                 </ul>
-
             </div>
 
             <div class="col-lg-3">
-
                 <h5>Resources</h5>
-
                 <ul class="list-unstyled">
-
-                    <li>
-                        <a href="resources.html"
-                           class="text-white text-decoration-none">
-                            Resources
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="faq.html"
-                           class="text-white text-decoration-none">
-                            FAQ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="success-stories.html"
-                           class="text-white text-decoration-none">
-                            Success Stories
-                        </a>
-                    </li>
-
+                    <li><a href="resources.html" class="text-decoration-none">Resources</a></li>
+                    <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+                    <li><a href="success-stories.html" class="text-decoration-none">Success Stories</a></li>
                 </ul>
-
             </div>
 
             <div class="col-lg-3">
-
                 <h5>Contact</h5>
-
-                <p>
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    info@somalinkfutures.org
-                </p>
-
-                <p>
-                    <i class="bi bi-geo-alt-fill me-2"></i>
-                    Nairobi, Kenya
-                </p>
-
-                <p>
-                    <i class="bi bi-telephone-fill me-2"></i>
-                    +254 700 123 456
-                </p>
-
+                <p><i class="bi bi-envelope-fill me-2"></i>info@somalinkfutures.org</p>
+                <p><i class="bi bi-geo-alt-fill me-2"></i>Nairobi, Kenya</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+254 700 123 456</p>
             </div>
 
         </div>
@@ -275,30 +187,24 @@
         <hr class="border-secondary my-4">
 
         <div class="text-center">
-
-            <p class="mb-2">
-                © 2026 SomaLink Futures. All Rights Reserved.
-            </p>
-
+            <p class="mb-2">© 2026 SomaLink Futures. All Rights Reserved.</p>
             <div>
-
                 <i class="bi bi-facebook fs-4 me-3"></i>
-
                 <i class="bi bi-linkedin fs-4 me-3"></i>
-
                 <i class="bi bi-twitter-x fs-4 me-3"></i>
-
                 <i class="bi bi-instagram fs-4"></i>
-
             </div>
-
         </div>
 
     </div>
-
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<button id="backToTop" class="btn btn-primary shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
