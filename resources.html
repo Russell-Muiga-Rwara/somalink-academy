@@ -11,7 +11,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-primary">
 
     <div class="container">
 
@@ -36,41 +36,15 @@
 
             <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="mentors.html">Mentors</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="scholarships.html">Scholarships</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="resources.html">Resources</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="success-stories.html">Success Stories</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="mentors.html">Mentors</a></li>
+                <li class="nav-item"><a class="nav-link" href="scholarships.html">Scholarships</a></li>
+                <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="success-stories.html">Success Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
             </ul>
 
@@ -80,105 +54,48 @@
 
 </nav>
 
-    <main class="container py-5">
+<main class="container py-5">
 
-        <h1 class="text-center mb-4">
-            Learning Resources
-        </h1>
+    <h1 class="text-center mb-4">
+        Learning Resources
+    </h1>
 
-        <p class="text-center mb-5">
-            Discover free tools, courses and career resources to accelerate your learning.
-        </p>
+    <p class="text-center mb-4">
+        Discover free tools, courses and career resources to accelerate your learning.
+    </p>
 
-        <div class="row g-4">
+    <div class="row justify-content-center mb-5">
 
-            <div class="col-lg-3 col-md-6">
+        <div class="col-lg-6">
 
-                <div class="card h-100 shadow-sm">
+            <input
+                type="text"
+                id="resourceSearch"
+                class="form-control form-control-lg"
+                placeholder="Search resources...">
 
-                    <div class="card-body">
+        </div>
 
-                        <h4>📘 eBooks</h4>
+    </div>
 
-                        <p>
-                            Download curated guides covering programming,
-                            finance, AI and career development.
-                        </p>
+    <div class="row g-4" id="resourceContainer">
 
-                        <a href="#" class="btn btn-primary">
-                            Download
-                        </a>
+        <div class="col-lg-3 col-md-6 resource-card">
 
-                    </div>
+            <div class="card h-100 shadow-sm">
 
-                </div>
+                <div class="card-body">
 
-            </div>
+                    <h4>📘 eBooks</h4>
 
-            <div class="col-lg-3 col-md-6">
+                    <p>
+                        Download curated guides covering programming,
+                        finance, AI and career development.
+                    </p>
 
-                <div class="card h-100 shadow-sm">
-
-                    <div class="card-body">
-
-                        <h4>🎥 Video Courses</h4>
-
-                        <p>
-                            Learn through high-quality video tutorials from
-                            industry professionals.
-                        </p>
-
-                        <a href="#" class="btn btn-primary">
-                            Watch
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="card h-100 shadow-sm">
-
-                    <div class="card-body">
-
-                        <h4>💻 Coding Practice</h4>
-
-                        <p>
-                            Improve your programming skills using practical
-                            coding challenges and projects.
-                        </p>
-
-                        <a href="#" class="btn btn-primary">
-                            Practice
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="card h-100 shadow-sm">
-
-                    <div class="card-body">
-
-                        <h4>📄 Career Guides</h4>
-
-                        <p>
-                            CV writing, interview preparation and internship
-                            application resources.
-                        </p>
-
-                        <a href="#" class="btn btn-primary">
-                            Read More
-                        </a>
-
-                    </div>
+                    <a href="#" class="btn btn-primary">
+                        Download
+                    </a>
 
                 </div>
 
@@ -186,9 +103,80 @@
 
         </div>
 
-    </main>
+        <div class="col-lg-3 col-md-6 resource-card">
 
-    <footer class="bg-dark text-white pt-5 pb-3">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>🎥 Video Courses</h4>
+
+                    <p>
+                        Learn through high-quality video tutorials from
+                        industry professionals.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Watch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 resource-card">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>💻 Coding Practice</h4>
+
+                    <p>
+                        Improve your programming skills using practical
+                        coding challenges and projects.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Practice
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 resource-card">
+
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>📄 Career Guides</h4>
+
+                    <p>
+                        CV writing, interview preparation and internship
+                        application resources.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Read More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="bg-dark text-white pt-5 pb-3">
 
     <div class="container">
 
@@ -213,26 +201,9 @@
 
                 <ul class="list-unstyled">
 
-                    <li>
-                        <a href="about.html"
-                           class="text-white text-decoration-none">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="careers.html"
-                           class="text-white text-decoration-none">
-                            Careers
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mentors.html"
-                           class="text-white text-decoration-none">
-                            Mentors
-                        </a>
-                    </li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    <li><a href="mentors.html" class="text-white text-decoration-none">Mentors</a></li>
 
                 </ul>
 
@@ -244,26 +215,9 @@
 
                 <ul class="list-unstyled">
 
-                    <li>
-                        <a href="resources.html"
-                           class="text-white text-decoration-none">
-                            Resources
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="faq.html"
-                           class="text-white text-decoration-none">
-                            FAQ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="success-stories.html"
-                           class="text-white text-decoration-none">
-                            Success Stories
-                        </a>
-                    </li>
+                    <li><a href="resources.html" class="text-white text-decoration-none">Resources</a></li>
+                    <li><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                    <li><a href="success-stories.html" class="text-white text-decoration-none">Success Stories</a></li>
 
                 </ul>
 
@@ -273,20 +227,9 @@
 
                 <h5>Contact</h5>
 
-                <p>
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    info@somalinkfutures.org
-                </p>
-
-                <p>
-                    <i class="bi bi-geo-alt-fill me-2"></i>
-                    Nairobi, Kenya
-                </p>
-
-                <p>
-                    <i class="bi bi-telephone-fill me-2"></i>
-                    +254 700 123 456
-                </p>
+                <p>info@somalinkfutures.org</p>
+                <p>Nairobi, Kenya</p>
+                <p>+254 700 123 456</p>
 
             </div>
 
@@ -300,25 +243,14 @@
                 © 2026 SomaLink Futures. All Rights Reserved.
             </p>
 
-            <div>
-
-                <i class="bi bi-facebook fs-4 me-3"></i>
-
-                <i class="bi bi-linkedin fs-4 me-3"></i>
-
-                <i class="bi bi-twitter-x fs-4 me-3"></i>
-
-                <i class="bi bi-instagram fs-4"></i>
-
-            </div>
-
         </div>
 
     </div>
 
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

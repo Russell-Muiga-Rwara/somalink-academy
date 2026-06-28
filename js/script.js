@@ -130,3 +130,37 @@ if (themeToggle) {
     });
 
 }
+
+// ===============================
+// Resource Search Filter
+// ===============================
+
+const searchInput = document.getElementById("resourceSearch");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", function () {
+
+        const filter = searchInput.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".resource-card");
+
+        cards.forEach(card => {
+
+            const text = card.textContent.toLowerCase();
+
+            if (text.includes(filter)) {
+
+                card.style.display = "";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
