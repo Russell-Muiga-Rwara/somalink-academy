@@ -378,3 +378,34 @@ footer a:hover {
 .shadow-lg {
     transition: all .3s ease;
 }
+/* =======================================
+   Professional Typography
+======================================= */
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+    letter-spacing: .2px;
+}
+
+.display-4 {
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    letter-spacing: -.5px;
+}
+
+p {
+    color: #6c757d;
+}
+
+.dark-mode p {
+    color: #d6d6d6;
+}
