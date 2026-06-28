@@ -254,3 +254,73 @@ body.dark-mode p{
 .nav-link:hover {
     color: #ffc107 !important;
 }
+
+/* =======================================
+   Responsive Design Improvements
+======================================= */
+
+@media (max-width: 992px) {
+
+    .hero-section {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-section img {
+        margin-top: 30px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 50px 15px;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .carousel img {
+        height: 300px !important;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .display-4 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-section {
+        padding: 40px 10px;
+    }
+
+}
