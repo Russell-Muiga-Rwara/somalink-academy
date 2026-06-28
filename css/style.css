@@ -131,3 +131,27 @@ section{
     padding-bottom:40px;
 
 }
+
+/* ---------- Hero Section ---------- */
+
+.hero-section{
+
+    background:linear-gradient(135deg,#EEF2FF,#FFFFFF);
+
+    padding-top:90px;
+
+    padding-bottom:90px;
+
+}
+
+.hero-section img{
+
+    border-radius:24px;
+
+}
+
+.hero-section h1{
+
+    line-height:1.2;
+
+}
