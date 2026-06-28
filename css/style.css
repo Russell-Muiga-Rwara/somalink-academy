@@ -409,3 +409,36 @@ p {
 .dark-mode p {
     color: #d6d6d6;
 }
+/* =======================================
+   Back To Top Button
+======================================= */
+
+#backToTop {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: none;
+
+    z-index: 999;
+
+    font-size: 1.3rem;
+
+    transition: all .3s ease;
+
+}
+
+#backToTop:hover {
+
+    transform: translateY(-5px);
+
+}
