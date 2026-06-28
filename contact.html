@@ -84,136 +84,109 @@
 
     <div class="text-center mb-5">
 
-        <h1>Contact SomaLink Futures</h1>
+        <h1>Contact Us</h1>
 
         <p class="lead">
-            We'd love to hear from students, mentors and partners.
+            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
         </p>
 
     </div>
 
-    <div class="row g-5">
+    <div class="row justify-content-center">
 
-        <div class="col-lg-7">
+        <div class="col-lg-8">
 
-            <div class="card shadow-sm p-4">
+            <div class="card shadow">
 
-                <h3 class="mb-4">
-                    Send us a Message
-                </h3>
+                <div class="card-body p-4">
 
-                <form id="contactForm">
+                    <form id="contactForm" novalidate>
 
-                    <div class="mb-3">
+                        <div class="mb-3">
 
-                        <label class="form-label">
-                            Full Name
-                        </label>
+                            <label for="name" class="form-label">
+                                Full Name
+                            </label>
 
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="John Doe"
-                            required>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name">
+
+                            <div class="invalid-feedback">
+                                Please enter your full name.
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="email" class="form-label">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email">
+
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="subject" class="form-label">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="subject">
+
+                            <div class="invalid-feedback">
+                                Subject is required.
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label for="message" class="form-label">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                class="form-control"
+                                rows="6"></textarea>
+
+                            <div class="invalid-feedback">
+                                Message should contain at least 20 characters.
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-lg">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                    <div
+                        id="successAlert"
+                        class="alert alert-success mt-4 d-none">
+
+                        ✅ Thank you! Your message has been submitted successfully.
 
                     </div>
-
-                    <div class="mb-3">
-
-                        <label class="form-label">
-                            Email Address
-                        </label>
-
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="email"
-                            placeholder="john@example.com"
-                            required>
-
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label class="form-label">
-                            Subject
-                        </label>
-
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="subject"
-                            required>
-
-                    </div>
-
-                    <div class="mb-4">
-
-                        <label class="form-label">
-                            Message
-                        </label>
-
-                        <textarea
-                            class="form-control"
-                            rows="6"
-                            id="message"
-                            required></textarea>
-
-                    </div>
-
-                    <button class="btn btn-primary btn-lg w-100">
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-        <div class="col-lg-5">
-
-            <div class="card shadow-sm p-4 mb-4">
-
-                <h3>
-                    Contact Information
-                </h3>
-
-                <hr>
-
-                <p>
-                    📍 Nairobi, Kenya
-                </p>
-
-                <p>
-                    📧 info@somalinkfutures.org
-                </p>
-
-                <p>
-                    📞 +254 700 123 456
-                </p>
-
-                <p>
-                    🕒 Monday – Friday<br>
-                    8:00 AM – 5:00 PM
-                </p>
-
-            </div>
-
-            <div class="card shadow-sm p-4">
-
-                <h4 class="mb-3">
-                    Office Location
-                </h4>
-
-                <div
-                    class="bg-light rounded d-flex justify-content-center align-items-center"
-                    style="height:220px;">
-
-                    <strong>
-                        Google Maps Placeholder
-                    </strong>
 
                 </div>
 
@@ -225,11 +198,131 @@
 
 </main>
 
-<footer class="bg-dark text-white py-5">
+<footer class="bg-dark text-white pt-5 pb-3">
 
-    <div class="container text-center">
+    <div class="container">
 
-        <p>&copy; 2026 SomaLink Futures. All Rights Reserved.</p>
+        <div class="row gy-4">
+
+            <div class="col-lg-4">
+
+                <h3 class="fw-bold mb-3">
+                    SomaLink Futures
+                </h3>
+
+                <p>
+                    Helping African students discover careers,
+                    scholarships, mentorship and future-ready skills.
+                </p>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <h5>Company</h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="about.html"
+                           class="text-white text-decoration-none">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="careers.html"
+                           class="text-white text-decoration-none">
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mentors.html"
+                           class="text-white text-decoration-none">
+                            Mentors
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Resources</h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="resources.html"
+                           class="text-white text-decoration-none">
+                            Resources
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html"
+                           class="text-white text-decoration-none">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="success-stories.html"
+                           class="text-white text-decoration-none">
+                            Success Stories
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Contact</h5>
+
+                <p>
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    info@somalinkfutures.org
+                </p>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    Nairobi, Kenya
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    +254 700 123 456
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center">
+
+            <p class="mb-2">
+                © 2026 SomaLink Futures. All Rights Reserved.
+            </p>
+
+            <div>
+
+                <i class="bi bi-facebook fs-4 me-3"></i>
+
+                <i class="bi bi-linkedin fs-4 me-3"></i>
+
+                <i class="bi bi-twitter-x fs-4 me-3"></i>
+
+                <i class="bi bi-instagram fs-4"></i>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -237,5 +330,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="js/script.js"></script>
 </body>
 </html>
