@@ -111,7 +111,9 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                id="name">
+                                id="name"
+                                aria-label="Full Name"
+                                required>
 
                             <div class="invalid-feedback">
                                 Please enter your full name.
@@ -128,7 +130,9 @@
                             <input
                                 type="email"
                                 class="form-control"
-                                id="email">
+                                id="email"
+                                aria-label="Email Address"
+                                required>
 
                             <div class="invalid-feedback">
                                 Please enter a valid email.
@@ -145,7 +149,9 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                id="subject">
+                                id="subject"
+                                aria-label="Subject"
+                                required>
 
                             <div class="invalid-feedback">
                                 Subject is required.
@@ -160,9 +166,12 @@
                             </label>
 
                             <textarea
-                                id="message"
                                 class="form-control"
-                                rows="6"></textarea>
+                                id="message"
+                                rows="5"
+                                aria-label="Message"
+                                required>
+                            </textarea>
 
                             <div class="invalid-feedback">
                                 Message should contain at least 20 characters.
