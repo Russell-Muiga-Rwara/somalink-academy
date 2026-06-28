@@ -174,3 +174,38 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
     tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+/* ======================================
+   Animated Statistics Counter
+====================================== */
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const target = +counter.dataset.target;
+
+    const speed = 200;
+
+    const updateCounter = () => {
+
+        const current = +counter.innerText.replace(/,/g, "");
+
+        const increment = Math.ceil(target / speed);
+
+        if (current < target) {
+
+            counter.innerText = (current + increment).toLocaleString();
+
+            setTimeout(updateCounter, 10);
+
+        } else {
+
+            counter.innerText = target.toLocaleString() + "+";
+
+        }
+
+    };
+
+    updateCounter();
+
+});
