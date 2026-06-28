@@ -227,3 +227,30 @@ body.dark-mode h6{
 body.dark-mode p{
     color:#dddddd;
 }
+
+/* ---------- Hover Effects ---------- */
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+.btn {
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    transition: color .3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
