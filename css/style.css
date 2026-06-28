@@ -47,6 +47,11 @@ body{
 }
 
 .btn-primary:hover{
+    .hero-section .btn{
+
+    min-width:200px;
+
+    }
 
     background:#4338CA;
 
@@ -72,9 +77,9 @@ body{
 
 .card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 
 }
 
@@ -130,27 +135,38 @@ footer p{
 
 section{
 
-    padding-top:40px;
-
-    padding-bottom:40px;
-
+    padding:100px 0;
 }
 
 /* ---------- Hero Section ---------- */
 
 .hero-section{
 
-    background:linear-gradient(135deg,#EEF2FF,#FFFFFF);
+    background: linear-gradient(135deg,#EEF2FF,#FFFFFF);
 
-    padding-top:90px;
+    min-height:90vh;
 
-    padding-bottom:90px;
+    display:flex;
+
+    align-items:center;
+
+    padding:90px 0;
 
 }
 
 .hero-section img{
 
     border-radius:24px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    transition:.4s ease;
+
+}
+
+.hero-section img:hover{
+
+    transform:scale(1.02);
 
 }
 
